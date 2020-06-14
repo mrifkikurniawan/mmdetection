@@ -83,7 +83,7 @@ class CocoDataset(CustomDataset):
 
         ids = set()
         for i, class_id in enumerate(self.cat_ids):
-            ids |= set(self.coco.cat_img_map[class_id])
+            ids |= set(self.coco.catToImgs[class_id])
         self.img_ids = list(ids)
 
         data_infos = []
